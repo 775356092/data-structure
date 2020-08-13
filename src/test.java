@@ -43,6 +43,10 @@ public class test {
     }
 
     public static void main(String[] args) {
-        System.out.println(2%-3);
+        Double x = 1d;
+        for (int i = 0; i < 100; i++) {
+            x = 2 * x;
+        }
+        System.out.println(x);
     }
 }

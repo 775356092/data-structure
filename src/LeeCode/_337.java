@@ -1,5 +1,7 @@
 package LeeCode;
 
+import java.util.HashMap;
+
 /**
  * @program: data-structure
  * @description: 打家劫舍 III
@@ -23,6 +25,39 @@ public class _337 {
     }
 
     public int rob(TreeNode root) {
-        return 0;
+        HashMap<TreeNode, Integer> map = new HashMap<>();
+        return f(root, map);
     }
+
+    /**
+     * 记忆化-动态规划
+     *
+     * 当前结点偷了，子节点就不能偷，但是可以偷孙子结点 money = root.val + root.left.left.val + root.left.right.val + root.right.left.val + root.right.right.val
+     * 当前结点偷 可以偷两个子节点， money = root.left.val + root.right.val
+     * 比较当前结点能偷到最多的钱
+     *
+     * @param root
+     * @param map
+     * @return
+     */
+    public int f(TreeNode root, HashMap<TreeNode, Integer> map) {
+        if (root == null) {
+            return 0;
+        }
+        if (map.containsKey(root)) {
+            return map.get(root);
+        }
+        int money = root.val;
+        if (root.left != null) {
+            money += f(root.left.left, map) + f(root.left.right, map);
+        }
+        if (root.right != null) {
+            money += f(root.right.left, map) + f(root.right.right, map);
+        }
+        int res = Math.max(money, f(root.left,map) + f(root.right,map));
+        map.put(root,res);
+        return res;
+    }
+
+
 }
