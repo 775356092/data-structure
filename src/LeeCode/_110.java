@@ -1,7 +1,5 @@
 package LeeCode;
 
-import java.util.Stack;
-
 /**
  * @program: data-structure
  * @description: 平衡二叉树
@@ -19,9 +17,7 @@ public class _110 {
         if (Math.abs(depth(root.left) - depth(root.right)) > 1) {
             return false;
         }
-        boolean left = isBalanced(root.left);
-        boolean right = isBalanced(root.right);
-        return left && right;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 
     //二叉树的深度
