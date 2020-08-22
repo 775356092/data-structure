@@ -1,7 +1,5 @@
 package Thread;
 
-import org.junit.Test;
-
 import java.util.concurrent.locks.LockSupport;
 
 /**

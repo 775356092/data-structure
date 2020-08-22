@@ -1,9 +1,3 @@
-import org.junit.Test;
-
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class test {
 
 

@@ -1,6 +1,5 @@
 package String;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.util.Scanner;
 
