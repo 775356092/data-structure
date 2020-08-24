@@ -14,7 +14,7 @@ public class _3 {
      */
     //滑动窗口
     public int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0 || s.equals("")) {
+        if (s == null || s.equals("")) {
             return 0;
         }
         int ans = 0;
@@ -30,7 +30,7 @@ public class _3 {
                     break;
                 }
             }
-            ans = Math.max(res,ans);
+            ans = Math.max(res, ans);
         }
         return ans;
     }
