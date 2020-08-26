@@ -37,10 +37,5 @@ public class test {
     }
 
     public static void main(String[] args) {
-        Double x = 1d;
-        for (int i = 0; i < 100; i++) {
-            x = 2 * x;
-        }
-        System.out.println(x);
     }
 }
