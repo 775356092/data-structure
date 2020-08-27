@@ -1,7 +1,6 @@
 package LeetCode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -57,8 +56,4 @@ public class _17 {
             dfs(digits, result + temp.charAt(j), index + 1);
         }
     }
-
-
-
-
 }
