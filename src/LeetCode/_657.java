@@ -14,27 +14,23 @@ public class _657 {
      * <p>
      * 注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。
      */
-    public boolean judgeCircle(String moves) {
-        int x = 0;
-        int y = 0;
-        for (int i = 0; i < moves.length(); i++) {
-            if (moves.charAt(i) == 'R') {
-                x -= 1;
-            }
-            if (moves.charAt(i) == 'L') {
-                x += 1;
-            }
-            if (moves.charAt(i) == 'U') {
-                y += 1;
-            }
-            if (moves.charAt(i) == 'D') {
-                y -= 1;
-            }
+public boolean judgeCircle(String moves) {
+    int x = 0;
+    int y = 0;
+    for (char c : moves.toCharArray()) {
+        if (c == 'R') {
+            x++;
         }
-        if (x == 0 && y == 0) {
-            return true;
-        } else {
-            return false;
+        if (c == 'L') {
+            x--;
+        }
+        if (c == 'U') {
+            y++;
+        }
+        if (c == 'D') {
+            y--;
         }
     }
+    return x == 0 && y == 0;
+}
 }
