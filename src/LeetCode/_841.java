@@ -8,15 +8,15 @@ public class _841 {
     //最初，除 0 号房间外的其余所有房间都被锁住。
     //你可以自由地在房间之间来回走动。
     //如果能进入每个房间返回 true，否则返回 false。
-    static int count;
+    int count;
 
-    public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int[] visited = new int[rooms.size()];
         dfs(rooms, 0, visited);
         return count == rooms.size();
     }
 
-    public static void dfs(List<List<Integer>> rooms, int room, int[] visited) {
+    public void dfs(List<List<Integer>> rooms, int room, int[] visited) {
         visited[room]++;
         count++;
         for (int next : rooms.get(room)) {
@@ -27,7 +27,7 @@ public class _841 {
     }
 
     //bfs
-    public static boolean canVisitAllRoom(List<List<Integer>> rooms) {
+    public boolean canVisitAllRoom(List<List<Integer>> rooms) {
         int[] visited = new int[rooms.size()];
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(0);
@@ -44,6 +44,5 @@ public class _841 {
         }
         return count == rooms.size();
     }
-
 
 }
