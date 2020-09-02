@@ -42,4 +42,8 @@ public class _65 {
         }
         return num;
     }
+    /*    public boolean isNumber(String s) {
+        String str="^[+|-]?((\\d+\\.?)|(\\d*\\.\\d+))([E|e][+|-]?\\d+)?$";
+        return s.trim().matches(str);
+    }*/
 }
