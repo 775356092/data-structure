@@ -1,41 +1,41 @@
 package LeetCode;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class O_38 {
 
-    static Set<String> res=new HashSet<>();//排重
-    public static String[] m(int[] arr) {
-        StringBuilder sb = new StringBuilder();
-        for(int i=0;i<arr.length;i++){
-            sb.append(arr[i]);
+    HashSet<String> res = new HashSet<String>();
+
+    public String[] permutation(String s) {
+        if (s.length() == 0) {
+            return new String[0];
         }
-        String s = sb.toString();
-        if(s==null)return new String[]{};//空
-        boolean[] visited=new boolean[s.length()];
-        dfs(s,"",visited);
-        String[] result=new String[res.size()];
+        int[] visited = new int[s.length()];
+        dfs(visited, "", s.toCharArray());
+        String[] result = new String[res.size()];
         return res.toArray(result);
     }
 
-    private static void dfs(String s,String letter,boolean[] visited){
-        if(s.length()==letter.length()){
+    public void dfs(int[] visited, String letter, char[] chars) {
+        if (chars.length == letter.length()) {
             res.add(letter);
-            return ;
+            return;
         }
-        for(int i=0;i<s.length();i++){
-            char c=s.charAt(i);
-            if(visited[i])continue;
-            visited[i]=true;
-            dfs(s,letter+c,visited);
-            visited[i]=false;
+        for (int i = 0; i < chars.length; i++) {
+            if (visited[i] == 0) {
+                visited[i]++;
+                dfs(visited, letter + chars[i], chars);
+                visited[i]--;
+            }
         }
     }
 
-    public static void main(String[] args) {
-        String[] m = m(new int[]{1, 2, 3});
-        System.out.println(Arrays.toString(m));
+    @Test
+    public void test() {
+        System.out.println(Arrays.toString(permutation("1234")));
     }
 }
