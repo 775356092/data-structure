@@ -3,6 +3,17 @@ package ArrayList;
 import java.util.Arrays;
 
 public class Quick_Sort {
+
+    /**
+     * 快速排序
+     * 以arr[left]作为哨兵
+     *
+     * @param arr
+     * @param low
+     * @param high
+     */
+
+
     //快排
     public static void quickSort(int[] arr, int low, int high) {
         int i, j, temp, t;
@@ -40,8 +51,8 @@ public class Quick_Sort {
 
 
     public static void main(String[] args) {
-        int[] arr = {10, 7, 2, 4, 7, 62, 3, 4, 2, 1, 8, 9, 19};
-        quickSort6(arr, 0, arr.length - 1);
+        int[] arr = {1, 22, 98, 66, 5, 99, 66, 86, 122, 129, 876, 689};
+        quickSort9(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -174,4 +185,83 @@ public class Quick_Sort {
         quickSort6(arr, left, i - 1);
         quickSort6(arr, i + 1, right);
     }
+
+    public static void quickSort7(int[] arr, int left, int right) {
+        if (left > right) {
+            return;
+        }
+        int i = left;
+        int j = right;
+        int temp = arr[left];
+        while (i < j) {
+            while (i < j && arr[j] >= temp) {
+                j--;
+            }
+            while (i < j && arr[i] <= temp) {
+                i++;
+            }
+            if (i < j) {
+                int t = arr[j];
+                arr[j] = arr[i];
+                arr[i] = t;
+            }
+        }
+        arr[left] = arr[i];
+        arr[i] = temp;
+        quickSort7(arr, left, i - 1);
+        quickSort7(arr, i + 1, right);
+    }
+
+    public static void quickSort8(int[] arr, int left, int right) {
+        if (left > right) {
+            return;
+        }
+        int i = left;
+        int j = right;
+        int temp = arr[left];
+        while (i < j) {
+            while (i < j && arr[j] >= temp) {
+                j--;
+            }
+            while (i < j && arr[i] <= temp) {
+                i++;
+            }
+            if (i < j) {
+                int t = arr[j];
+                arr[j] = arr[i];
+                arr[i] = t;
+            }
+        }
+        arr[left] = arr[i];
+        arr[i] = temp;
+        quickSort8(arr, left, i - 1);
+        quickSort8(arr, i + 1, right);
+    }
+
+    public static void quickSort9(int[] arr, int left, int right) {
+        if (left > right) {
+            return;
+        }
+        int i = left;
+        int j = right;
+        int temp = arr[left];
+        while (i < j) {
+            while (i < j && arr[j] >= temp) {
+                j--;
+            }
+            while (i < j && arr[i] <= temp) {
+                i++;
+            }
+            if (i < j) {
+                int t = arr[i];
+                arr[i] = arr[j];
+                arr[j] = t;
+            }
+        }
+        arr[left] = arr[i];
+        arr[i] = temp;
+        quickSort9(arr, left, i - 1);
+        quickSort9(arr, i + 1, right);
+    }
+
 }
