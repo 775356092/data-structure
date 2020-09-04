@@ -1,5 +1,9 @@
 package LeetCode;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+
 /**
  * @description: Z 字形变换
  * @author: wang hao
@@ -18,31 +22,43 @@ public class _6 {
      * 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
      */
 
-    /**
-     * 字符串按顺序走
-     * [0,0] -> [1,0] -> [2,0] -> ... ->[numRows,0] -> [numRows-1,1] -> [nuRows-2,2] -> ... ->
-     * [0,x] -> [1,x] -> [2,x] -> ... ->[numRows,x] -> [numRows-1,x+1] -> [numRows-2,x+2] -> ... ->
-     * [0,y] -> ...
-     */
+
     public String convert(String s, int numRows) {
-        if (numRows == 0) {
-            return null;
-        }
-        if (numRows == 1 || numRows == 2) {
+        if (numRows < 2) {
             return s;
         }
-        /**
-         * numRows-2+numRows个字符占numRows-1列
-         */
         StringBuilder res = new StringBuilder();
-        int len = s.length();
-        int row = len / numRows + 1;
-        char[][] arr = new char[numRows][];
+        ArrayList<StringBuilder> rows = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
-            for (int j = 0; j < row; j++) {
-
-            }
+            rows.add(new StringBuilder());
         }
-        return null;
+        //0 1 2 1 0 1 2
+        int i = 0;
+        boolean flag = true;
+        for (char c : s.toCharArray()) {
+            rows.get(i).append(c);
+            if (flag) {
+                i++;
+                if (i == numRows - 1) {
+                    flag = false;
+                }
+            } else {
+                i--;
+                if (i == 0) {
+                    flag = true;
+                }
+            }
+
+        }
+        for (StringBuilder sb : rows) {
+            res.append(sb.toString());
+        }
+        return res.toString();
     }
+
+    @Test
+    public void test() {
+        System.out.println(convert("LEETCODEISHIRING", 3));
+    }
+
 }
