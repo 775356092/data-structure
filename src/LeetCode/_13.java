@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class _13 {
     public int romanToInt(String s) {
         int res = 0;
-        HashMap<Character, Integer> map = new HashMap<>(){};
+        HashMap<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
         map.put('V', 5);
         map.put('X', 10);
