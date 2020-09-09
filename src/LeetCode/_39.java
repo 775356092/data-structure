@@ -11,26 +11,27 @@ public class _39 {
     //给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
     //candidates 中的数字可以无限制重复被选取。
 
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    List<List<Integer>> res;
 
-        ArrayList<List<Integer>> res = new ArrayList<>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        res = new ArrayList<>();
         Arrays.sort(candidates);//排序为了方便剪枝
-        dfs(res, candidates, target, new ArrayList<>(), 0);
+        dfs(candidates, target, new ArrayList<>(), 0);
         return res;
     }
 
-    public void dfs(ArrayList<List<Integer>> res, int[] candidates, int target, List<Integer> list, int start) {
+    public void dfs(int[] candidates, int target, List<Integer> list, int index) {
         if (target == 0) {
             res.add(new ArrayList<>(list));
             return;
         }
-        //start为下一轮搜索的起点
-        for (int i = start; i < candidates.length; i++) {
+        //index为下一轮搜索的起点
+        for (int i = index; i < candidates.length; i++) {
             if (target < candidates[i]) {//剪枝
                 break;
             }
             list.add(candidates[i]);
-            dfs(res, candidates, target - candidates[i], list, i);
+            dfs(candidates, target - candidates[i], list, i);
             list.remove(list.size() - 1);//回溯
         }
     }
