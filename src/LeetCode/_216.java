@@ -21,9 +21,6 @@ public class _216 {
     }
 
     public void dfs(int target, int len, ArrayList<Integer> list, int index) {
-        if (len < list.size()) {
-            return;
-        }
         if (target == 0 && len == list.size()) {
             res.add(new ArrayList<>(list));
             return;
@@ -39,7 +36,7 @@ public class _216 {
     }
 
     @Test
-    public void test(){
-        System.out.println(combinationSum3(3,7));
+    public void test() {
+        System.out.println(combinationSum3(3, 7));
     }
 }
