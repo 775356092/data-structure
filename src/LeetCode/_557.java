@@ -15,19 +15,10 @@ public class _557 {
         StringBuilder res = new StringBuilder();
         String[] split = s.split("\\s+");
         for (String string : split) {
-            String s1 = reverse(string);
+            String s1 = new StringBuilder(string).reverse().toString();
             res.append(s1);
             res.append(" ");
         }
-        String ans = res.toString().trim();
-        return ans;
-    }
-
-    public String reverse(String s) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = s.length() - 1; i >= 0; i--) {
-            sb.append(s.charAt(i));
-        }
-        return sb.toString();
+        return res.toString().trim();
     }
 }
