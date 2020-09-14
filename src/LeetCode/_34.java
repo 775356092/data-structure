@@ -1,5 +1,9 @@
 package LeetCode;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 /**
  * @program: data-structure
  * @description: 在排序数组中查找元素的第一个和最后一个位置
@@ -16,6 +20,46 @@ public class _34 {
      */
     //二分查找
     public int[] searchRange(int[] nums, int target) {
-        return new int[0];
+        int[] res = new int[]{-1, -1};
+        if (nums.length == 0) {
+            return res;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        if (left == right) {
+            if (target == nums[0]) {
+                return new int[]{0, 0};
+            }
+            return res;
+        }
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] >= target) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        if (left == nums.length || nums[left] != target) {
+            return res;
+        }
+        res[0] = left;
+        left = 0;
+        right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > target) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        res[1] = left - 1;
+        return res;
+    }
+
+    @Test
+    public void test() {
+        System.out.println(Arrays.toString(searchRange(new int[]{2,2}, 2)));
     }
 }
