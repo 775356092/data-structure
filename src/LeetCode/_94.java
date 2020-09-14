@@ -31,10 +31,6 @@ public class _94 {
         if (root == null) {
             return;
         }
-        if (root.left == null && root.right == null) {
-            res.add(root.val);
-            return;
-        }
         dfs(root.left);
         res.add(root.val);
         dfs(root.right);
