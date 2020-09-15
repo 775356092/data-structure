@@ -28,39 +28,13 @@ public class _21 {
         if (l2 == null) {
             return l1;
         }
-        if (l1 == null && l2 == null) {
-            return null;
-        }
-        ListNode res = null;
         if (l1.val <= l2.val) {
-            res = l1;
-            l1 = l1.next;
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
         } else {
-            res = l2;
-            l2 = l2.next;
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
         }
-        ListNode p = res;
-        while (l1 != null || l2 != null) {
-            if (l1 == null) {
-                p.next = l2;
-                return res;
-            }
-            if (l2 == null) {
-                p.next = l1;
-                return res;
-            }
-            if (l1.val <= l2.val) {
-                p.next = l1;
-                p=l1;
-                l1 = l1.next;
-            } else {
-                p.next = l2;
-                p=l2;
-                l2 = l2.next;
-            }
-        }
-        res.next = null;
-        return res;
     }
 
     public static void main(String[] args) {
