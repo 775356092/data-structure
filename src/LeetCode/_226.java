@@ -1,6 +1,7 @@
 package LeetCode;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class _226 {
     //翻转一棵二叉树。
@@ -14,32 +15,44 @@ public class _226 {
         }
     }
 
+    public TreeNode invertTree2(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                TreeNode temp = node.left;
+                node.left = node.right;
+                node.right = temp;
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+        }
+        return root;
+    }
+
+    /**
+     * 递归
+     *
+     * @param root
+     * @return
+     */
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;
         }
-        LinkedList<TreeNode> queue = new LinkedList<>();
-        LinkedList<TreeNode> temp;
-        TreeNode res=root;
-        queue.add(res);
-        while (!queue.isEmpty()){
-            temp = new LinkedList<>();
-            for(TreeNode node:queue){
-                TreeNode l = new TreeNode(0);
-                l = node.left;
-                node.left = node.right;
-                node.right = l;
-            }
-            for(TreeNode node:queue){
-                if(node.left!=null){
-                    temp.add(node.left);
-                }
-                if(node.right!=null){
-                    temp.add(node.right);
-                }
-            }
-            queue = temp;
-        }
-        return res;
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+        root.left = right;
+        root.right = left;
+        return root;
     }
 }
