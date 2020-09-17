@@ -2,7 +2,6 @@ package LeetCode;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
