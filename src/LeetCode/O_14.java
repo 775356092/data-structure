@@ -1,5 +1,7 @@
 package LeetCode;
 
+import org.junit.Test;
+
 /**
  * @description: 剪绳子
  * @author: wang hao
@@ -23,21 +25,25 @@ public class O_14 {
 
     //尽可能多分出3
     public int cutRope(int n) {
-        int t = (int) (1e9 + 7);
         if (n == 2) {
             return 1;
         }
         if (n == 3) {
             return 2;
         }
-        int res = 1;
+        long res = 1;
         //n=5,拆分成3和2；n=4,拆分成2和2；
         while (n > 4) {
             res *= 3;
-            res = res % t;
+            res = res % 1000000007;
             n -= 3;
         }
-        return res * n % t;
+        return (int) (res * n % 1000000007);
+    }
+
+    @Test
+    public void test() {
+        System.out.println(cutRope(120));
     }
 
 }
