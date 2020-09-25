@@ -27,6 +27,7 @@ public class _106 {
         //后序遍历的最后一个结点为根节点
         TreeNode root = new TreeNode(postorder[postorder.length - 1]);
         //首先根据根节点在中序遍历中找到该节点，左部分为左子树，右部分为右子树。
+        //然后递归，在左子树的后序遍历中找到根节点，以根节点在中序遍历中找到该节点，左部分为左子树，右部分为右子树。右子树同理
         for (int i = 0; i < postorder.length; i++) {
             if (inorder[i] == postorder[postorder.length - 1]) {
                 root.left = buildTree(Arrays.copyOfRange(inorder, 0, i), Arrays.copyOfRange(postorder, 0, i));
