@@ -36,6 +36,7 @@ public class _113 {
         path.add(root.val);
         if (root.val == sum && root.left == null && root.right == null) {
             res.add(new ArrayList<>(path));
+            //注意这里不能return，如果return这里不会对叶子节点进行回溯
         }
         dfs(root.left, sum - root.val, path);
         dfs(root.right, sum - root.val, path);
