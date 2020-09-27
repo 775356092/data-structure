@@ -1,5 +1,8 @@
 package LeetCode;
 
+import org.junit.Test;
+
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
@@ -33,5 +36,23 @@ public class _3 {
             ans = Math.max(res, ans);
         }
         return ans;
+    }
+
+    public int lengthOfLongestSubstring2(String s) {
+        int[] lefts = new int[128];
+        Arrays.fill(lefts, -1);
+        int res = 0, left = 0;
+        for (int i = 0; i < s.length(); i++) {
+            //字符串内字符不能重复，所以要从上一次出现位置的下一个位置开始
+            left = Math.max(left, lefts[s.charAt(i)] + 1);
+            lefts[s.charAt(i)] = i;
+            res = Math.max(res, i - left + 1);
+        }
+        return res;
+    }
+
+    @Test
+    public void test() {
+        System.out.println(lengthOfLongestSubstring2("abcaa"));
     }
 }
