@@ -1,6 +1,5 @@
 package LeetCode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -10,25 +9,26 @@ import java.util.Queue;
  * @create: 2020-09-28 08:57
  */
 public class _117 {
-    public Node connect(Node root) {
-        if (root == null) return null;
-        Queue<Node> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            ArrayList<Node> list = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                Node node = queue.poll();
-                list.add(node);
-                if (node.left != null) queue.offer(node.left);
-                if (node.right != null) queue.offer(node.right);
+
+public Node connect(Node root) {
+    if (root == null) return null;
+    Queue<Node> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        Node pre = null;
+        for (int i = 0; i < size; i++) {
+            Node node = queue.poll();
+            if (node.left != null) queue.offer(node.left);
+            if (node.right != null) queue.offer(node.right);
+            if (i != 0) {
+                pre.next = node;
             }
-            for (int i = 0; i < size - 1; i++) {
-                list.get(i).next = list.get(i + 1);
-            }
+            pre = node;
         }
-        return root;
     }
+    return root;
+}
 
     class Node {
         public int val;
