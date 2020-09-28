@@ -29,8 +29,8 @@ public class O_33 {
     }
 
     @Test
-    public void test(){
-        System.out.println(verifyPostorder(new int[]{1,2,3,4,5}));
+    public void test() {
+        System.out.println(verifyPostorder(new int[]{1, 2, 3, 4, 5}));
     }
 
 }
