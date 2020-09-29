@@ -1,7 +1,6 @@
 package LeetCode;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @description: 二叉树的后序遍历
@@ -35,5 +34,22 @@ public class _145 {
         dfs(root.right);
         res.add(root.val);
     }
+
+    public List<Integer> postorderTraversal2(TreeNode root) {
+        LinkedList<Integer> res = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode t = root;
+        while (t != null || !stack.isEmpty()) {
+            if (t != null) {
+                stack.push(t);
+                res.addFirst(t.val);
+                t = t.right;
+            } else {
+                t = stack.pop().left;
+            }
+        }
+        return res;
+    }
+
 
 }
