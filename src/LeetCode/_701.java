@@ -68,7 +68,7 @@ public class _701 {
         if (root.val > val) {
             root.left = insertIntoBST2(root.left, val);
         } else {
-            root.right = insertIntoBST(root.right, val);
+            root.right = insertIntoBST2(root.right, val);
         }
         return root;
     }
