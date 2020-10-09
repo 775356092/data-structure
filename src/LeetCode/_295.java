@@ -14,11 +14,12 @@ public class _295 {
         private PriorityQueue<Integer> minheap;
 
         public MedianFinder() {
-            maxheap = new PriorityQueue<>((o1, o2) -> o2 - o1);
-            minheap = new PriorityQueue<>();
+            maxheap = new PriorityQueue<>((o1, o2) -> o2 - o1); // 大顶堆，保存较小的一半
+            minheap = new PriorityQueue<>();// 小顶堆，保存较大的一半
         }
 
         public void addNum(int num) {
+            // 要保证小顶堆的堆顶元素要大于大顶堆的堆顶元素
             if (maxheap.size() == minheap.size()) {
                 maxheap.offer(num);
                 minheap.offer(maxheap.poll());
