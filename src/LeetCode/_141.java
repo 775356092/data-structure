@@ -22,9 +22,8 @@ public class _141 {
         while (head != null) {
             if (set.contains(head)) {
                 return true;
-            } else {
-                set.add(head);
             }
+            set.add(head);
             head = head.next;
         }
         return false;
