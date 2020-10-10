@@ -20,6 +20,15 @@ public class _206 {
         }
     }
 
+    //递归
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode tail = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return tail;
+    }
+
     //迭代
     public ListNode reverseList2(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
@@ -42,13 +51,17 @@ public class _206 {
         return null;
     }
 
-    //递归
-    public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) return head;
-        ListNode tail = reverseList(head.next);
-        head.next.next = head;
-        head.next = null;
-        return tail;
+    //迭代2
+    public ListNode reverseList3(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode t = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = t;
+        }
+        return pre;
     }
 
     @Test
