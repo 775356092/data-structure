@@ -33,10 +33,15 @@ public class _142 {
         return null;
     }
 
-    //双指针
+    /**
+     * 设表头到入口节点长度为a, 环的长度为b, 快指针走了x, 慢指针走了y
+     * 快指针比慢指针多走了一倍的路, x = 2y
+     * 快指针比慢指针多走了n圈, x = n * b + y ==> y = n * b
+     * 快指针走了2n圈, 慢指针走了n圈
+     * 所有走到链表入口节点时的步数: k = a + n * b（先走 a 步到入口节点，之后每绕 1 圈环 b 步）都会再次到入口节点
+     * 在相遇点，慢指针再走a步就可以到达入口节点
+     */
     public ListNode detectCycle2(ListNode head) {
-        // 设链表到入环的第一个节点长度为a
-        // 慢指针再走a步就可以到达入环的第一个节点
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
