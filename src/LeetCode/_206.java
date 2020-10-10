@@ -1,10 +1,27 @@
 package LeetCode;
 
+import org.junit.Test;
+
 import java.util.Stack;
 
+/**
+ * @description: 反转链表
+ * @author: wang hao
+ * @create: 2020-10-10 14:40
+ */
 public class _206 {
-    //反转链表
-    public static ListNode reverseList(ListNode head) {
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
+    //迭代
+    public ListNode reverseList2(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
         while (head != null) {
             stack.push(head);
@@ -25,15 +42,17 @@ public class _206 {
         return null;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-        }
+    //递归
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode tail = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return tail;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         ListNode node = new ListNode(1);
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
@@ -47,8 +66,8 @@ public class _206 {
         node5.next = node6;
         ListNode node1 = reverseList(node);
         while (node1 != null) {
-            System.out.print(node1.val+" ");
-            node1= node1.next;
+            System.out.print(node1.val + " ");
+            node1 = node1.next;
         }
     }
 }
