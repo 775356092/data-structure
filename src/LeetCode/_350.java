@@ -1,6 +1,7 @@
 package LeetCode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @description: 两个数组的交集 II
@@ -9,31 +10,21 @@ import java.util.ArrayList;
  */
 public class _350 {
     public int[] intersect(int[] nums1, int[] nums2) {
-        ArrayList<Integer> res = new ArrayList<>();
-        if (nums1.length <= nums2.length) {
-            for (int a : nums1) {
-                for (int b : nums2) {
-                    if (a == b) {
-                        res.add(a);
-                        break;
-                    }
-                }
+        ArrayList<Integer> list = new ArrayList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : nums1) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        for (int num : nums2) {
+            if (map.containsKey(num) && map.get(num) > 0) {
+                map.put(num, map.get(num) - 1);
+                list.add(num);
             }
         }
-        if (nums1.length > nums2.length) {
-            for (int a : nums2) {
-                for (int b : nums1) {
-                    if (a == b) {
-                        res.add(a);
-                        break;
-                    }
-                }
-            }
+        int[] res = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            res[i] = list.get(i);
         }
-        int[] ans = new int[res.size()];
-        for (int i = 0; i < res.size(); i++) {
-            ans[i] = res.get(i);
-        }
-        return ans;
+        return res;
     }
 }
