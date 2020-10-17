@@ -1,5 +1,7 @@
 package LeetCode;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 
 /**
@@ -15,27 +17,31 @@ public class _136 {
      * 你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？
      */
 
-    public static int singleNumber(int[] nums) {
+    //hash表
+    public int singleNumber(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        int res = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (!map.containsKey(nums[i])) {
-                map.put(nums[i], 1);
-            } else {
-                map.replace(nums[i], map.get(nums[i]) + 1);
-            }
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        for(Integer i : map.keySet()){
-            if(map.get(i)==1){
-                res = i;
-                break;
+        for (int key : map.keySet()) {
+            if (map.get(key) == 1) {
+                return key;
             }
         }
         return -1;
     }
 
-    public static void main(String[] args) {
-        int i = singleNumber(new int[]{2, 2, 1});
-        System.out.println(i);
+    //异或运算满足交换律和结合律 a^a = 0, a^0 = a, a^b^a = a^a^b = 0^b = b
+    public int singleNumber2(int[] nums) {
+        int t = 0;
+        for (int n : nums) {
+            t ^= n;
+        }
+        return t;
+    }
+
+    @Test
+    public void test() {
+        System.out.println(singleNumber(new int[]{1, 1, 2, 2, 3}));
     }
 }

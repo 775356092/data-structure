@@ -1,12 +1,12 @@
 package LeetCode;
 
 /**
- * @description: 排除数组中的重复项
+ * @description: 删除排序数组中的重复项
  * @author: wang hao
  * @create: 2020-08-31 10:17
  */
 public class _26 {
-    public int removeDuplicates(int nums[]) {
+    public int removeDuplicates(int[] nums) {
         if (nums.length == 0) {
             return 0;
         }

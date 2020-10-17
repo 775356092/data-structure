@@ -15,7 +15,7 @@ public class _5 {
     //dp[l][l+1] = s.charAt(l)==s.charAt(r)
     //时间复杂度O(n^2)
     public static String longestPalindrome(String s) {
-        if (s.length() < 2 || s == null) {
+        if (s.length() < 2) {
             return s;
         }
         int left = 0;
@@ -42,7 +42,7 @@ public class _5 {
     //如果回文字符串长度为偶数，就要找到字符串中含有两个字符的回文字符串向外延申
     //时间复杂度O(n^2)
     public static String longestStr(String s) {
-        if (s.length() < 2 || s == null) {
+        if (s.length() < 2) {
             return s;
         }
         int left = 0;
@@ -81,7 +81,7 @@ public class _5 {
 
     //中心扩展法，找以i，i-1为中心的偶数回文子序列，找以i-1，i+1为中心的奇数回文子序列
     public static String longest(String s) {
-        if (s.length() < 2 || s == null) {
+        if (s.length() < 2) {
             return s;
         }
         int left = 0;
