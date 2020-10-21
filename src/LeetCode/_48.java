@@ -1,7 +1,7 @@
 package LeetCode;
 
 /**
- * @description: 旋转图像
+ * @description: 旋转矩阵
  * @author: wang hao
  * @create: 2020-09-11 14:31
  */
