@@ -28,7 +28,7 @@ public class _147 {
                 cur = cur.next;
             } else {
                 ListNode t = dummy;
-                // 找到一个位置使得t < cur < t.next
+                // t < cur < t.next
                 while (t.next != cur && t.next.val < cur.val) {
                     t = t.next;
                 }
