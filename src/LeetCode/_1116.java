@@ -11,7 +11,6 @@ import java.util.function.IntConsumer;
 public class _1116 {
     class ZeroEvenOdd {
         private int n;
-        private volatile boolean printBorC = true;
         private volatile int state;
 
         public ZeroEvenOdd(int n) {
@@ -25,22 +24,11 @@ public class _1116 {
                     Thread.yield();
                 }
                 printNumber.accept(0);
-                if (printBorC) {
+                if (i % 2 == 0) {
                     state = 1;
                 } else {
                     state = 2;
                 }
-            }
-        }
-
-        public void even(IntConsumer printNumber) throws InterruptedException {
-            for (int i = 2; i <= n; i += 2) {
-                while (state != 2) {
-                    Thread.yield();
-                }
-                printNumber.accept(i);
-                state = 0;
-                printBorC = true;
             }
         }
 
@@ -51,7 +39,16 @@ public class _1116 {
                 }
                 printNumber.accept(i);
                 state = 0;
-                printBorC = false;
+            }
+        }
+
+        public void even(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 2; i <= n; i += 2) {
+                while (state != 2) {
+                    Thread.yield();
+                }
+                printNumber.accept(i);
+                state = 0;
             }
         }
     }
@@ -80,17 +77,17 @@ public class _1116 {
             }
         }
 
-        public void even(IntConsumer printNumber) throws InterruptedException {
-            for (int i = 2; i <= n; i += 2) {
-                printB.acquire();
+        public void odd(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 1; i <= n; i += 2) {
+                printC.acquire();
                 printNumber.accept(i);
                 printA.release();
             }
         }
 
-        public void odd(IntConsumer printNumber) throws InterruptedException {
-            for (int i = 1; i <= n; i += 2) {
-                printC.acquire();
+        public void even(IntConsumer printNumber) throws InterruptedException {
+            for (int i = 2; i <= n; i += 2) {
+                printB.acquire();
                 printNumber.accept(i);
                 printA.release();
             }
