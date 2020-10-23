@@ -13,7 +13,7 @@ public class _274 {
     public int hIndex(int[] citations) {
         Arrays.sort(citations);
         int i = 0;
-        while (i < citations.length && citations[citations.length - i - 1] >= i) {
+        while (i < citations.length && citations[citations.length - i - 1] > i) {
             i++;
         }
         return i;
@@ -21,6 +21,6 @@ public class _274 {
 
     @Test
     public void test() {
-        System.out.println(hIndex(new int[]{3, 0, 6, 1, 5}));
+        System.out.println(hIndex(new int[]{0}));
     }
 }
