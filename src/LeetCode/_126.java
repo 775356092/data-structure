@@ -25,6 +25,7 @@ public class _126 {
         boolean flag = false;
         while (!queue.isEmpty()) {
             int size = queue.size();
+            // 记录下一层visited，这里很关键，如果只用一个全局的visited记录每层访问过的元素，会导致缺边
             Set<String> currentVisited = new HashSet<>();
             for (int i = 0; i < size; i++) {
                 String s = queue.poll();
@@ -34,12 +35,15 @@ public class _126 {
                         if (s.charAt(j) == k) continue;
                         String t = new StringBuilder(s).replace(j, j + 1, k + "").toString();
                         if (dict.contains(t)) {
+                            // 这里判断之前有没有
                             if (!visited.contains(t)) {
                                 if (t.equals(endWord)) flag = true;
+                                // 这里单独记录每层的访问过的元素，防止元素重复入队
                                 if (!currentVisited.contains(t)) {
                                     queue.offer(t);
                                     currentVisited.add(t);
                                 }
+                                // 保存本层元素和下一层元素之间的关系
                                 map.computeIfAbsent(s, o -> new HashSet<>());
                                 map.get(s).add(t);
                             }
