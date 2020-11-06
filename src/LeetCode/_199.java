@@ -21,7 +21,7 @@ public class _199 {
         }
     }
 
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView2(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<>();
         if (root == null) return res;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -36,5 +36,22 @@ public class _199 {
             }
         }
         return res;
+    }
+
+    ArrayList<Integer> res = new ArrayList<>();
+    int deepest = 0;
+    public List<Integer> rightSideView(TreeNode root) {
+        dfs(root, 0);
+        return res;
+    }
+
+    public void dfs(TreeNode root, int depth) {
+        if (root == null) return;
+        if (deepest == depth) {
+            res.add(root.val);
+            deepest++;
+        }
+        dfs(root.right, depth + 1);
+        dfs(root.left, depth + 1);
     }
 }
