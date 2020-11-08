@@ -16,22 +16,22 @@ public class _647 {
      * @param s
      * @return
      */
-public int countSubstrings(String s) {
-    if (s == null || s.equals("")) {
-        return 0;
-    }
-    int res = 0;
-    boolean[][] dp = new boolean[s.length()][s.length()];
-    for (int j = 0; j < s.length(); j++) {
-        for (int i = 0; i <= j; i++) {
-            if (s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1])) {
-                dp[i][j] = true;
-                res++;
+    public int countSubstrings(String s) {
+        if (s == null || s.equals("")) {
+            return 0;
+        }
+        int res = 0;
+        boolean[][] dp = new boolean[s.length()][s.length()];
+        for (int j = 0; j < s.length(); j++) {
+            for (int i = 0; i <= j; i++) {
+                if (s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1])) {
+                    dp[i][j] = true;
+                    res++;
+                }
             }
         }
+        return res;
     }
-    return res;
-}
 
     /**
      * 拓展中心法

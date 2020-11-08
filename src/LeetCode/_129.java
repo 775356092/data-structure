@@ -20,13 +20,13 @@ public class _129 {
     }
 
     int res = 0;
-
+    ArrayList<Integer> path = new ArrayList<>();
     public int sumNumbers(TreeNode root) {
-        dfs(root, new ArrayList<>());
+        dfs(root);
         return res;
     }
 
-    public void dfs(TreeNode root, ArrayList<Integer> path) {
+    public void dfs(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -34,8 +34,8 @@ public class _129 {
         if (root.left == null && root.right == null) {
             res += count(new ArrayList<>(path));
         }
-        dfs(root.left, path);
-        dfs(root.right, path);
+        dfs(root.left);
+        dfs(root.right);
         path.remove(path.size() - 1);
     }
 
