@@ -52,48 +52,33 @@ public class _127 {
         Queue<String> queue2 = new LinkedList<>();
         queue2.offer(endWord);
         HashSet<String> visited1 = new HashSet<>();
-        HashSet<String> visited2 = new HashSet<>();
         visited1.add(beginWord);
+        HashSet<String> visited2 = new HashSet<>();
         visited2.add(endWord);
         int res = 2;
         while (!queue1.isEmpty() && !queue2.isEmpty()) {
             // 优先迭代小队列
             if (queue1.size() > queue2.size()) {
-                int size = queue2.size();
-                for (int i = 0; i < size; i++) {
-                    String s = queue2.poll();
-                    // 尝试更换s每个位置的字符，看是否在set中
-                    for (int j = 0; j < s.length(); j++) {
-                        for (char k = 'a'; k <= 'z'; k++) {
-                            if (k == s.charAt(j)) continue;
-                            String t = new StringBuilder(s).replace(j, j + 1, k + "").toString();
-                            if (set.contains(t)) {
-                                if (t.equals(beginWord)) return res;
-                                if (visited1.contains(t)) return res;
-                                if (!visited2.contains(t)) {
-                                    queue2.offer(t);
-                                    visited2.add(t);
-                                }
-                            }
-                        }
-                    }
-                }
-            } else {
-                int size = queue1.size();
-                for (int i = 0; i < size; i++) {
-                    String s = queue1.poll();
-                    // 尝试更换s每个位置的字符，看是否在set中
-                    for (int j = 0; j < s.length(); j++) {
-                        for (char k = 'a'; k <= 'z'; k++) {
-                            if (k == s.charAt(j)) continue;
-                            String t = new StringBuilder(s).replace(j, j + 1, k + "").toString();
-                            if (set.contains(t)) {
-                                if (t.equals(endWord)) return res;
-                                if (visited2.contains(t)) return res;
-                                if (!visited1.contains(t)) {
-                                    queue1.offer(t);
-                                    visited1.add(t);
-                                }
+                Queue<String> temp1 = queue1;
+                queue1 = queue2;
+                queue2 = temp1;
+                HashSet<String> temp2 = visited1;
+                visited1 = visited2;
+                visited2 = temp2;
+            }
+            int size = queue1.size();
+            for (int i = 0; i < size; i++) {
+                String s = queue1.poll();
+                // 尝试更换s每个位置的字符，看是否在set中
+                for (int j = 0; j < s.length(); j++) {
+                    for (char k = 'a'; k <= 'z'; k++) {
+                        if (k == s.charAt(j)) continue;
+                        String t = new StringBuilder(s).replace(j, j + 1, k + "").toString();
+                        if (set.contains(t)) {
+                            if (visited2.contains(t)) return res;
+                            if (!visited1.contains(t)) {
+                                queue1.offer(t);
+                                visited1.add(t);
                             }
                         }
                     }
@@ -107,6 +92,7 @@ public class _127 {
     @Test
     public void test() {
         System.out.println(ladderLength2("a", "c", Arrays.asList("a", "b", "c")));
+        System.out.println(ladderLength2("kiss", "tusk", Arrays.asList("miss", "dusk", "kiss", "musk", "tusk", "diss", "disk", "sang", "ties", "muss")));
     }
 
 }
