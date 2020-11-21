@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="560de0d1-4932-4b1f-9ba1-32bf7b69155e" name="Default Changelist" comment="买卖股票的最佳时机 II">
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/_148.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/_5520.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LeetCode/_5521.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="data-structure" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1gN08VfzWC8C77zeVsDgS3nTrp2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="LeetCode" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit._402">
+    <configuration name="_402" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LeetCode" />
+      <option name="MAIN_CLASS_NAME" value="LeetCode._402" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_5520" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LeetCode" />
+      <option name="MAIN_CLASS_NAME" value="LeetCode._5520" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_5521" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LeetCode" />
+      <option name="MAIN_CLASS_NAME" value="LeetCode._5521" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_5521.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LeetCode" />
+      <option name="MAIN_CLASS_NAME" value="LeetCode._5521" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_78" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-structure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LeetCode" />
+      <option name="MAIN_CLASS_NAME" value="LeetCode._78" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit._402" />
+        <item itemvalue="JUnit._78" />
+        <item itemvalue="JUnit._5521" />
+        <item itemvalue="JUnit._5521.test" />
+        <item itemvalue="JUnit._5520" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="560de0d1-4932-4b1f-9ba1-32bf7b69155e" name="Default Changelist" comment="" />
+      <created>1597939584100</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597939584100</updated>
+      <workItem from="1597939585915" duration="34000" />
+      <workItem from="1597939635744" duration="3299000" />
+      <workItem from="1598074942230" duration="949000" />
+      <workItem from="1598075900308" duration="4192000" />
+      <workItem from="1598148717544" duration="12391000" />
+      <workItem from="1598677039581" duration="650000" />
+      <workItem from="1598798303130" duration="288000" />
+      <workItem from="1599310122740" duration="7374000" />
+      <workItem from="1599355968971" duration="3754000" />
+      <workItem from="1599875446720" duration="670000" />
+      <workItem from="1599894153798" duration="4968000" />
+      <workItem from="1599909169938" duration="17603000" />
+      <workItem from="1600211551783" duration="262000" />
+      <workItem from="1600212331197" duration="282000" />
+      <workItem from="1600478491116" duration="682000" />
+      <workItem from="1600483892683" duration="2777000" />
+      <workItem from="1600569410448" duration="8091000" />
+      <workItem from="1601087037711" duration="669000" />
+      <workItem from="1602387611322" duration="367000" />
+      <workItem from="1602387985604" duration="828000" />
+      <workItem from="1602394053610" duration="60000" />
+      <workItem from="1602394129467" duration="2483000" />
+      <workItem from="1602572135575" duration="1529000" />
+      <workItem from="1602902910503" duration="1454000" />
+      <workItem from="1603078405932" duration="1686000" />
+      <workItem from="1603118314524" duration="1245000" />
+      <workItem from="1604840158136" duration="787000" />
+      <workItem from="1605137334944" duration="600000" />
+      <workItem from="1605442039614" duration="3459000" />
+      <workItem from="1605966043144" duration="2333000" />
+    </task>
+    <task id="LOCAL-00001" summary="二叉树的最小深度">
+      <created>1597940344803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597940344803</updated>
+    </task>
+    <task id="LOCAL-00002" summary="二叉树的最小深度">
+      <created>1597942439900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597942439900</updated>
+    </task>
+    <task id="LOCAL-00003" summary="24点">
+      <created>1598078829313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598078829313</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify">
+      <created>1598078864044</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598078864044</updated>
+    </task>
+    <task id="LOCAL-00005" summary="modify">
+      <created>1598149564183</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598149564183</updated>
+    </task>
+    <task id="LOCAL-00006" summary="modify">
+      <created>1598193897568</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598193897568</updated>
+    </task>
+    <task id="LOCAL-00007" summary="第k个排列">
+      <created>1599319294417</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599319294417</updated>
+    </task>
+    <task id="LOCAL-00008" summary="二叉树的层序遍历（自底向上）">
+      <created>1599368926690</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599368926690</updated>
+    </task>
+    <task id="LOCAL-00009" summary="单词搜索">
+      <created>1599979462064</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979462064</updated>
+    </task>
+    <task id="LOCAL-00010" summary="二叉树的层平均值">
+      <created>1599979497138</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979497138</updated>
+    </task>
+    <task id="LOCAL-00011" summary="反转字符串中的单词 III">
+      <created>1599979526360</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979526360</updated>
+    </task>
+    <task id="LOCAL-00012" summary="二进制矩阵中的特殊位置">
+      <created>1599979602159</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979602159</updated>
+    </task>
+    <task id="LOCAL-00013" summary="连接所有点的最小费用">
+      <created>1599979644111</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979644111</updated>
+    </task>
+    <task id="LOCAL-00014" summary="速算机器人">
+      <created>1599979656863</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979656863</updated>
+    </task>
+    <task id="LOCAL-00015" summary="早餐组合">
+      <created>1599979667718</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979667718</updated>
+    </task>
+    <task id="LOCAL-00016" summary="早餐组合">
+      <created>1599979679043</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1599979679043</updated>
+    </task>
+    <task id="LOCAL-00017" summary="左叶子之和">
+      <created>1600496573148</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1600496573148</updated>
+    </task>
+    <task id="LOCAL-00018" summary="子集">
+      <created>1600575834145</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1600575834145</updated>
+    </task>
+    <task id="LOCAL-00019" summary="重新排列单词间的空格">
+      <created>1600575857937</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1600575857937</updated>
+    </task>
+    <task id="LOCAL-00020" summary="N皇后 II">
+      <created>1602905606895</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602905606895</updated>
+    </task>
+    <task id="LOCAL-00021" summary="买卖股票的最佳时机 II">
+      <created>1604840874170</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1604840874170</updated>
+    </task>
+    <task id="LOCAL-00022" summary="删掉K位数字">
+      <created>1605447172499</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1605447172499</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="二叉树的最小深度" />
+    <MESSAGE value="24点" />
+    <MESSAGE value="modify" />
+    <MESSAGE value="第k个排列" />
+    <MESSAGE value="二叉树的层序遍历（自底向上）" />
+    <MESSAGE value="单词搜索" />
+    <MESSAGE value="二叉树的层平均值" />
+    <MESSAGE value="反转字符串中的单词 III" />
+    <MESSAGE value="二进制矩阵中的特殊位置" />
+    <MESSAGE value="连接所有点的最小费用" />
+    <MESSAGE value="速算机器人" />
+    <MESSAGE value="早餐组合" />
+    <MESSAGE value="左叶子之和" />
+    <MESSAGE value="子集" />
+    <MESSAGE value="重新排列单词间的空格" />
+    <MESSAGE value="N皇后 II" />
+    <MESSAGE value="买卖股票的最佳时机 II" />
+    <MESSAGE value="删掉K位数字" />
+    <option name="LAST_COMMIT_MESSAGE" value="删掉K位数字" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Notifications" timestamp="1605968427570">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1605968427570" />
+    <state x="710" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599875623890">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="710" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599875623890" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1598075938564">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598075938564" />
+    <state x="739" y="404" width="441" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604840194369">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="404" width="441" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1604840194369" />
+    <state x="873" y="102" key="CommitChangelistDialog2" timestamp="1605968497027">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="873" y="102" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605968497027" />
+    <state x="184" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1602902990620">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602902990620" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1597940549865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597940549865" />
+    <state width="1877" height="185" key="GridCell.Tab.0.bottom" timestamp="1605447270333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270333" />
+    <state width="1877" height="185" key="GridCell.Tab.0.center" timestamp="1605447270333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270333" />
+    <state width="1877" height="185" key="GridCell.Tab.0.left" timestamp="1605447270333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270333" />
+    <state width="1877" height="185" key="GridCell.Tab.0.right" timestamp="1605447270333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270333" />
+    <state width="1877" height="385" key="GridCell.Tab.1.bottom" timestamp="1605447270332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="385" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270332" />
+    <state width="1877" height="385" key="GridCell.Tab.1.center" timestamp="1605447270332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="385" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270332" />
+    <state width="1877" height="385" key="GridCell.Tab.1.left" timestamp="1605447270331">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="385" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270331" />
+    <state width="1877" height="385" key="GridCell.Tab.1.right" timestamp="1605447270332">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="385" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605447270332" />
+    <state x="296" y="86" key="MergeDialog" timestamp="1602902973094">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="296" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602902973094" />
+    <state x="669" y="235" width="806" height="569" key="MultipleFileMergeDialog" timestamp="1602902974783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="235" width="806" height="569" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602902974783" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1605444936213">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605444936213" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605968543043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605968543043" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1605966128603">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605966128603" />
+    <state x="658" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599311625812">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="658" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1599311625812" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597940630325">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597940630325" />
+    <state x="636" y="253" width="870" height="762" key="find.popup" timestamp="1602572508414">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="253" width="870" height="762" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602572508414" />
+    <state x="334" y="214" key="new project wizard" timestamp="1603083108701">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="214" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1603083108701" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599976366169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599976366169" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_5495.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_5495.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_5497.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_60.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_60.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_78.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LeetCode/_78.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
