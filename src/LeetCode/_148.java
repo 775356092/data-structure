@@ -37,6 +37,7 @@ public class _148 {
         ListNode right = sortList(r);
         ListNode dummy = new ListNode(0);
         ListNode tail = dummy;
+        // 合并两个有序链表
         while (left != null && right != null) {
             if (left.val < right.val) {
                 tail.next = left;
