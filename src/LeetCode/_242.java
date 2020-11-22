@@ -1,7 +1,5 @@
 package LeetCode;
 
-import java.util.HashMap;
-
 /**
  * @description: 有效的字母异位词
  * @author: wang hao
@@ -10,22 +8,14 @@ import java.util.HashMap;
 public class _242 {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
-        HashMap<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            map.put(c, map.getOrDefault(c, 0) + 1);
+        int[] count = new int[26];
+        for (char c : s.toCharArray()) {
+            count[c - 'a']++;
         }
-        for (int i = 0; i < t.length(); i++) {
-            char c = t.charAt(i);
-            if (map.containsKey(c)) {
-                int x = map.get(c);
-                if (x == 1) {
-                    map.remove(c);
-                } else {
-                    map.put(c, x - 1);
-                }
-            }
+        for (char c : t.toCharArray()) {
+            count[c - 'a']--;
+            if (count[c - 'a'] < 0) return false;
         }
-        return map.size() == 0;
+        return true;
     }
 }
