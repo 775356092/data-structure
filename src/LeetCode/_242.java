@@ -26,6 +26,6 @@ public class _242 {
                 }
             }
         }
-        return map.size() > 0;
+        return map.size() == 0;
     }
 }
